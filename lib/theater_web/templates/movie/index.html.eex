@@ -11,9 +11,7 @@
     </tr>
   </thead>
   <tbody>
-<%= for movie <- @movies do %>
-  <%= render "_movie.html", movie: movie, conn: @conn %>
-<% end %>
+    <%= render_many @movies, TheaterWeb.MovieView, "_movie.html", conn: @conn %>
   </tbody>
 </table>
 
