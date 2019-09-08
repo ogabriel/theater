@@ -12,6 +12,8 @@
 
 alias Theater.Entertainments
 
+Entertainments.delete_all_movies()
+
 movies_data = [
   %{
     title: "Apocalypto",

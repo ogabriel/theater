@@ -90,6 +90,16 @@ defmodule Theater.Entertainments do
   end
 
   @doc """
+    Deletes all movies
+
+    ## Examples
+      iex> delete_all_movies()
+      {..., nil}
+
+  """
+  def delete_all_movies(), do: Repo.delete_all(Movie)
+
+  @doc """
   Returns an `%Ecto.Changeset{}` for tracking movie changes.
 
   ## Examples
