@@ -1,5 +1,11 @@
 # Theater
 
+Steps form ElixirCast#23
+  * https://elixircasts.io/partial-templates-with-phoenix
+  * https://elixircasts.io/seeding-data-in-phoenix
+
+But with some testing things
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
