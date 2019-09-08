@@ -19,6 +19,7 @@ defmodule TheaterWeb.Router do
     # get "/", PageController, :index
     get "/about", PageController, :about
     resources "/movies", MovieController
+    resources "/actors", ActorController
   end
 
   # Other scopes may use custom stacks.

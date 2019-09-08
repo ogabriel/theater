@@ -13,6 +13,7 @@
         <nav role="navigation">
           <ul>
             <li><%= link "All movies", to: Routes.movie_path(@conn, :index) %></li>
+            <li><%= link "All actors", to: Routes.actor_path(@conn, :index) %></li>
             <li><%= link "About", to: Routes.page_path(@conn, :about) %></li>
           </ul>
         </nav>

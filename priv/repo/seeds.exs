@@ -11,8 +11,10 @@
 # and so on) as they will fail if something goes wrong.
 
 alias Theater.Entertainments
+alias Theater.People
 
 Entertainments.delete_all_movies()
+People.delete_all_actors()
 
 movies_data = [
   %{
@@ -53,6 +55,25 @@ movies_data = [
   }
 ]
 
+actors_data = [
+  %{
+    name: "Meryl Streep",
+    likes: "to act"
+  },
+  %{
+    name: "Cate Blanchett",
+    likes: "to act"
+  },
+  %{
+    name: "Jodie Foster",
+    likes: "to act"
+  }
+]
+
 Enum.each(movies_data, fn(data) ->
   Entertainments.create_movie(data)
+end)
+
+Enum.each(actors_data, fn(data) ->
+  People.create_actor(data)
 end)
