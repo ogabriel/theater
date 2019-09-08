@@ -16,7 +16,8 @@ defmodule TheaterWeb.Router do
   scope "/", TheaterWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    # get "/", PageController, :index
+    resources "/movies", MovieController
   end
 
   # Other scopes may use custom stacks.
