@@ -7,6 +7,8 @@ defmodule Theater.Entertainments.Movie do
     field :title, :string
     field :year, :integer
 
+    many_to_many :actors, Theater.People.Actor, join_through: "movies_actors"
+
     timestamps()
   end
 
