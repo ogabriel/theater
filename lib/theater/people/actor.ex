@@ -6,7 +6,7 @@ defmodule Theater.People.Actor do
     field :likes, :string
     field :name, :string
 
-    many_to_many :movies, Theater.Entertainments.Movie, join_through: "movies_actors"
+    many_to_many :movies, Theater.Entertainments.Movie, join_through: "movies_actors", on_replace: :delete
 
     timestamps()
   end
