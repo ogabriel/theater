@@ -17,6 +17,13 @@
   <%= number_input f, :year %>
   <%= error_tag f, :year %>
 
+  <%= label f, :actors%>
+  <%= multiple_select f,
+    :actors,
+    list_all_actors(),
+    selected: Enum.map(f.data.actors, &(&1.id)) %>
+  <%= error_tag f, :actors%>
+
   <div>
     <%= submit "Save" %>
   </div>
