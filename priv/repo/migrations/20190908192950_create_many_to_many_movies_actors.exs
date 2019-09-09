@@ -5,8 +5,6 @@ defmodule Theater.Repo.Migrations.CreateManyToManyMoviesActors do
     create table(:movies_actors) do
       add :movie_id, references(:movies)
       add :actor_id, references(:actors)
-
-      timestamps()
     end
 
     create index(:movies_actors, [:movie_id])
