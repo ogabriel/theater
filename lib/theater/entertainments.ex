@@ -18,7 +18,7 @@ defmodule Theater.Entertainments do
 
   """
   def list_movies do
-    Repo.all(Movie)
+    Repo.all(Movie) |> Repo.preload(:actors)
   end
 
   @doc """
@@ -35,7 +35,7 @@ defmodule Theater.Entertainments do
       ** (Ecto.NoResultsError)
 
   """
-  def get_movie!(id), do: Repo.get!(Movie, id)
+  def get_movie!(id), do: Repo.get!(Movie, id) |> Repo.preload(:actors)
 
   @doc """
   Creates a movie.
@@ -109,6 +109,8 @@ defmodule Theater.Entertainments do
 
   """
   def change_movie(%Movie{} = movie) do
-    Movie.changeset(movie, %{})
+    movie
+    |> Repo.preload(:actors)
+    |> Movie.changeset(%{})
   end
 end
